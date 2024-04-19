@@ -16,12 +16,13 @@ app.use(cors({
 
 app.use(express.json())
 
+app.use("/api",postRouter);
+
 app.get("*",(req,res)=>{
     res.sendFile(path.join(__dirname,"dist",'index.html'))
 })
 
 
-app.use("/api",postRouter);
 
 
 
