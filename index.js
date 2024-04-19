@@ -6,7 +6,7 @@ const postRouter=require("./router/postRouter");
 
 const app=express();
 dataConn();
-// app.use(express.static(path.resolve(__dirname,"dist")))
+app.use(express.static(path.resolve(__dirname,"dist")))
 
 app.use(cors({
     credentials: true,
@@ -15,7 +15,7 @@ app.use(cors({
 
 app.use(express.json())
 
-app.get("/",(req,res)=>{
+app.get("*",(req,res)=>{
     res.sendFile(path.join(__dirname,"dist",'index.html'))
 })
 
