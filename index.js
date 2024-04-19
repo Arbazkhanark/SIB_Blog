@@ -2,6 +2,7 @@ const express=require("express");
 const cors=require("cors");
 const dataConn = require("./database");
 const postRouter=require("./router/postRouter");
+const path=require("path");
 
 
 const app=express();
